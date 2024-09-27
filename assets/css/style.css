@@ -1,0 +1,142 @@
+/* Navbar styles */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+header button {
+  background-color: #258575;
+  padding: 15px 30px;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+}
+
+/* Hero Styles */
+.hero {
+  background-color: #258575;
+  padding: 3rem 3rem 0;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+}
+.hero-content {
+  margin: 20px 0 -50px;
+}
+.hero-content p {
+  text-transform: uppercase;
+  line-height: 3rem;
+  font-weight: 100;
+}
+.hero .hero-content h3 {
+  justify-items: center;
+  font-size: 25px;
+}
+
+/* Categories */
+
+.categories {
+  margin: 4rem 5rem;
+  line-height: 3rem;
+}
+
+.categories ul {
+  list-style: none;
+  /* line-height: 2rem; */
+}
+
+.categories li {
+  line-height: 2rem;
+  display: inline-flex;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  border-radius: 50px;
+  border: 1px solid #818180;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+.categories li.active {
+  border: 1px solid #d5a100;
+}
+.latest-posts {
+  margin: 0 5rem;
+  line-height: 2rem;
+}
+.blog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  /* margin: 0 5rem; */
+}
+i.fa-arrow-right {
+  transform: rotate(-15deg);
+  /* rotate: 40deg clockwise; */
+}
+.blog .blog-content {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+}
+.blog .blog-content #study-abroad {
+  text-transform: uppercase;
+  border: 1px solid #d5a100;
+  padding: 2px 10px;
+  font-size: 10px;
+  border-radius: 30px;
+}
+/* .carousel {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  padding: 10px;
+}
+
+#prevButton {
+  left: 10px;
+}
+
+#nextButton {
+  right: 10px;
+} */
