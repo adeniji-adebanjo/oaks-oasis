@@ -47,6 +47,7 @@ header button {
 
 /* Categories */
 
+/* Categories Section */
 .categories {
   margin: 4rem 5rem;
   line-height: 3rem;
@@ -54,7 +55,6 @@ header button {
 
 .categories ul {
   list-style: none;
-  /* line-height: 2rem; */
 }
 
 .categories li {
@@ -67,31 +67,54 @@ header button {
   border: 1px solid #818180;
   padding: 15px 30px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
+
 .categories li.active {
   border: 1px solid #d5a100;
 }
+
+.categories li:hover {
+  background-color: #d5a100;
+  color: white;
+}
+
+/* Latest Posts Section */
 .latest-posts {
   margin: 0 5rem;
   line-height: 2rem;
 }
+
 .blog {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  /* margin: 0 5rem; */
+  grid-template-rows: auto;
+  grid-gap: 1rem;
 }
+
+/* Adjust blog layout for small screens */
+@media screen and (max-width: 768px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hover effect for posts */
+.blog .col:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
 i.fa-arrow-right {
   transform: rotate(-15deg);
-  /* rotate: 40deg clockwise; */
 }
+
 .blog .blog-content {
   display: flex;
   align-items: center;
   column-gap: 3rem;
 }
+
 .blog .blog-content #study-abroad {
   text-transform: uppercase;
   border: 1px solid #d5a100;
@@ -99,44 +122,3 @@ i.fa-arrow-right {
   font-size: 10px;
   border-radius: 30px;
 }
-/* .carousel {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  overflow: hidden;
-  border: 1px solid #ccc;
-}
-
-.carousel-inner {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.carousel-item {
-  min-width: 100%;
-  transition: opacity 0.5s ease;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  cursor: pointer;
-  font-size: 2em;
-  padding: 10px;
-}
-
-#prevButton {
-  left: 10px;
-}
-
-#nextButton {
-  right: 10px;
-} */

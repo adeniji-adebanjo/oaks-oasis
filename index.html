@@ -42,14 +42,9 @@
         />
       </div>
     </div>
-    <!-- <div>
-      <p id="below-img">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo
-        consectetur amet quas esse eaque.
-      </p>
-      <p>Read post <i class="fas fas fa-arrow-right"></i></p>
-    </div> -->
+    <!-- Hero ends -->
 
+    <!-- Categories section begins -->
     <div class="categories">
       <h3>Category</h3>
       <p>Choose from the categories below to see your preferences.</p>
@@ -71,7 +66,8 @@
       <p>Here's our latest post so far.</p>
 
       <div class="blog">
-        <div class="col">
+        <!-- Post 1 (Belongs to 'Study Abroad' and 'Student Lifestyle') -->
+        <div class="col" data-category="study-abroad student-lifestyle">
           <img
             src="assets/images/bg-hero.jpg"
             width="400"
@@ -79,20 +75,19 @@
             alt=""
           />
           <div class="blog-content">
-            <p id="study-abroad">Study Abroad</p>
+            <p>Study Abroad</p>
             <p>JUL 02, 2023</p>
           </div>
-          <h3>
-            The Future of AI Education and the Skills Students Need for a Career
-            in AI
-          </h3>
+          <h3>The Future of AI Education and the Skills Students Need</h3>
           <p>
             The AI industry has shattered the long-held belief that significant
-            change can only occur gradually and in phases...
+            change can only occur gradually...
           </p>
           <p>Read post <i class="fas fa-arrow-right"></i></p>
         </div>
-        <div class="col">
+
+        <!-- Post 2 (Belongs to 'Study in UK' and 'International Student') -->
+        <div class="col" data-category="study-in-uk international-student">
           <img
             src="assets/images/bg-hero.jpg"
             width="400"
@@ -100,20 +95,16 @@
             alt=""
           />
           <div class="blog-content">
-            <p id="study-abroad">Study Abroad</p>
+            <p>Study in UK</p>
             <p>JUL 02, 2023</p>
           </div>
-          <h3>
-            The Future of AI Education and the Skills Students Need for a Career
-            in AI
-          </h3>
-          <p>
-            The AI industry has shattered the long-held belief that significant
-            change can only occur gradually and in phases...
-          </p>
+          <h3>AI and Robotics: Preparing Students for Future Careers</h3>
+          <p>The AI industry is growing rapidly...</p>
           <p>Read post <i class="fas fa-arrow-right"></i></p>
         </div>
-        <div class="col">
+
+        <!-- Post 3 (Belongs to 'Study in Canada' and 'International Course') -->
+        <div class="col" data-category="study-in-canada international-course">
           <img
             src="assets/images/bg-hero.jpg"
             width="400"
@@ -121,20 +112,16 @@
             alt=""
           />
           <div class="blog-content">
-            <p id="study-abroad">Study Abroad</p>
+            <p>Study in Canada</p>
             <p>JUL 02, 2023</p>
           </div>
-          <h3>
-            The Future of AI Education and the Skills Students Need for a Career
-            in AI
-          </h3>
-          <p>
-            The AI industry has shattered the long-held belief that significant
-            change can only occur gradually and in phases...
-          </p>
+          <h3>How Canadian Schools Are Adapting to AI in Education</h3>
+          <p>With AI at the forefront...</p>
           <p>Read post <i class="fas fa-arrow-right"></i></p>
         </div>
-        <div class="col">
+
+        <!-- Post 4 (Belongs to 'Overseas Educational' and 'Events') -->
+        <div class="col" data-category="overseas-educational events">
           <img
             src="assets/images/bg-hero.jpg"
             width="400"
@@ -142,79 +129,16 @@
             alt=""
           />
           <div class="blog-content">
-            <p id="study-abroad">Study Abroad</p>
+            <p>Overseas Educational</p>
             <p>JUL 02, 2023</p>
           </div>
-          <h3>
-            The Future of AI Education and the Skills Students Need for a Career
-            in AI
-          </h3>
-          <p>
-            The AI industry has shattered the long-held belief that significant
-            change can only occur gradually and in phases...
-          </p>
+          <h3>AI and Education: How International Events Shape the Future</h3>
+          <p>AI and educational events are working in synergy...</p>
           <p>Read post <i class="fas fa-arrow-right"></i></p>
         </div>
       </div>
     </div>
-    <!-- <div class="categories">
-      <p>Choose from the categories below to see your preferences</p>
-      <div class="container">
-        <h2>Categories</h2>
-        <div class="tabs">
-          <button class="tab-button active" onclick="openTab('allCategories')">
-            All Categories
-          </button>
-          <button class="tab-button" onclick="openTab('category1')">
-            Category 1
-          </button>
-          <button class="tab-button" onclick="openTab('category2')">
-            Category 2
-          </button>
-          <button class="tab-button" onclick="openTab('category3')">
-            Category 3
-          </button>
-        </div>
 
-        <div class="tab-content">
-          <div id="allCategories" class="tab active">
-            <h4>All Categories</h4>
-            <p>Here are all the categories displayed together.</p>
-          </div>
-          <div id="category1" class="tab">
-            <h4>Category 1</h4>
-            <p>Content for Category 1.</p>
-          </div>
-          <div id="category2" class="tab">
-            <h4>Category 2</h4>
-            <p>Content for Category 2.</p>
-          </div>
-          <div id="category3" class="tab">
-            <h4>Category 3</h4>
-            <p>Content for Category 3.</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <script>
-      function openTab(tabName) {
-        // Get all elements with class="tab" and hide them
-        const tabs = document.querySelectorAll(".tab");
-        tabs.forEach((tab) => {
-          tab.classList.remove("active");
-        });
-
-        // Get all elements with class="tab-button" and remove the class "active"
-        const buttons = document.querySelectorAll(".tab-button");
-        buttons.forEach((button) => {
-          button.classList.remove("active");
-        });
-
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(tabName).classList.add("active");
-        event.currentTarget.classList.add("active");
-      }
-    </script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
