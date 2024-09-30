@@ -1,0 +1,34 @@
+[
+  {
+    "title": "The Future of AI Education and the Skills Students Need",
+    "image": "assets/images/bg-hero.jpg",
+    "category": ["study-abroad", "student-lifestyle"],
+    "date": "JUL 02, 2023",
+    "description": "The AI industry has shattered the long-held belief that significant change can only occur gradually...",
+    "link": "#"
+  },
+  {
+    "title": "AI and Robotics: Preparing Students for Future Careers",
+    "image": "assets/images/bg-hero.jpg",
+    "category": ["study-in-uk", "international-student"],
+    "date": "JUL 02, 2023",
+    "description": "The AI industry is growing rapidly...",
+    "link": "#"
+  },
+  {
+    "title": "How Canadian Schools Are Adapting to AI in Education",
+    "image": "assets/images/bg-hero.jpg",
+    "category": ["study-in-canada", "international-course"],
+    "date": "JUL 02, 2023",
+    "description": "With AI at the forefront...",
+    "link": "#"
+  },
+  {
+    "title": "AI and Education: How International Events Shape the Future",
+    "image": "assets/images/bg-hero.jpg",
+    "category": ["overseas-educational", "events"],
+    "date": "JUL 02, 2023",
+    "description": "AI and educational events are working in synergy...",
+    "link": "#"
+  }
+]

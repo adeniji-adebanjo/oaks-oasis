@@ -1,49 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="assets/css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      @media only screen and (max-width: 600px) {
-        body {
-          background-color: lightblue;
-        }
-      }
-    </style>
+    <title>Latest Posts</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    Hello Bukola, You're welcome to JavaScript class
-    <p>Hello <strong> David</strong> , you're welcome!</p>
-    <h1>Hello Shittu, you're smiling in my class!</h1>
-    <h2>
-      Hi there, have you listenied to my new album on baby shakdududdududududu
-    </h2>
-    <h3>hello there</h3>
-    <h4>hello there</h4>
-    <h5>hello there</h5>
-    <h6>hello there</h6>
+    <div class="latest-posts">
+      <h3>Latest Posts</h3>
+      <p>Here's our latest post so far.</p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>name</th>
-          <th>phone</th>
-          <th>country</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Adeleke</td>
-          <td>0812345678</td>
-          <td>Ghana</td>
-        </tr>
-        <tr>
-          <td>Emmanuel</td>
-          <td>818181827272</td>
-          <td>Burkinafaso</td>
-        </tr>
-      </tbody>
-    </table>
+      <!-- Categories List -->
+      <ul class="categories">
+        <li class="active">All Categories</li>
+        <li>Study Abroad</li>
+        <li>Study in UK</li>
+        <li>Study in Canada</li>
+        <li>Overseas Educational</li>
+        <li>Events</li>
+      </ul>
+
+      <!-- Blog posts will be inserted here dynamically -->
+      <div class="blog"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const categories = document.querySelectorAll(".categories li");
+        const blogContainer = document.querySelector(".blog");
+
+        // Fetch posts from JSON file
+        fetch("/assets/json/posts.json")
+          .then((response) => response.json())
+          .then((posts) => {
+            renderPosts(posts);
+
+            // Filter posts by category when category <li> is clicked
+            categories.forEach((category) => {
+              category.addEventListener("click", () => {
+                categories.forEach((cat) => cat.classList.remove("active"));
+                category.classList.add("active");
+
+                const selectedCategory = category.textContent
+                  .trim()
+                  .toLowerCase()
+                  .replace(/\s+/g, "-");
+                if (selectedCategory === "all-categories") {
+                  renderPosts(posts);
+                } else {
+                  const filteredPosts = posts.filter((post) =>
+                    post.category.includes(selectedCategory)
+                  );
+                  renderPosts(filteredPosts);
+                }
+              });
+            });
+          })
+          .catch((error) => console.error("Error fetching the posts:", error));
+
+        // Function to render posts
+        function renderPosts(posts) {
+          blogContainer.innerHTML = ""; // Clear existing posts
+
+          posts.forEach((post) => {
+            const postHTML = `
+            <div class="col" data-category="${post.category.join(" ")}">
+              <img src="${post.image}" width="400" height="200" alt="" />
+              <div class="blog-content">
+                <p>${post.category[0].replace(/-/g, " ")}</p>
+                <p>${post.date}</p>
+              </div>
+              <h3>${post.title}</h3>
+              <p>${post.description}</p>
+              <p>Read post <a href="${
+                post.link
+              }"><i class="fas fa-arrow-right"></i></a></p>
+            </div>
+          `;
+            blogContainer.insertAdjacentHTML("beforeend", postHTML);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
