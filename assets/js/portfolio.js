@@ -1,10 +1,14 @@
 let body = document.getElementById('body');
-body.style.width= '80%';
-body.style.marginLeft= '10%';
-body.style.marginRight= '10%';
-body.style.display ='block';
-body.style.flexDirection = 'row';
-body.style.justifyContent = 'center';
+
+// body.forEachElement(bodyElement => {
+    body.style.width= '80%';
+    body.style.marginLeft= '10%';
+    body.style.marginRight= '10%';
+    body.style.display ='block';
+    body.style.flexDirection = 'row';
+    body.style.justifyContent = 'center';
+// })
+
 
 let navbar = document.getElementById('navbar');
 navbar.style.display = 'flex';
@@ -115,6 +119,38 @@ experiences.forEach(experience => {
 
 
 
+let experiment  = document.getElementsByTagName('p')[0];
+console.log(experiment);
 
+
+
+// let webb = document.getElementById('webb')
+
+let webb = document.getElementById('webb');
+
+webb.onmouseenter = changeText;
+
+function changeText() {
+ webb.innerHTML = 'Testing 1 2'
+}
+
+// setInterval(changeText, 3000);
+// webb.innerHTML = 'Testing 1 2'
+
+let createElement = document.createElement('div')
+
+let innerDiv = createElement = 'h1'
+
+innerDiv.innerText= 'Testing 1'
+
+
+
+
+const person = { 
+    name: 'femi',
+    age: 2, 
+}
+
+person.name
 
 
