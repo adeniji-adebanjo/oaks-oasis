@@ -1,0 +1,48 @@
+body{
+    background-color: #EFEFEE;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px 20px 10px;
+    align-content: center;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #3030305b;
+    align-content: center;
+}
+
+.pages {
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#brandname{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+}
+
+#brandname span{
+    color: #303030;
+}
+
+.sociallogos{
+    width: 15%; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.sociallogos a{
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}
