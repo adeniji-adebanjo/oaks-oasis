@@ -44,5 +44,18 @@ body{
 .sociallogos a{
     width: 24px;
     height: 24px;
-    align-self: center;
+align-self: center;
+}
+
+.vehicle {
+    display: none;
+}
+
+#myForm {
+    background-color: rgb(165, 198, 226);
+    padding: 10px;
+}
+
+.lastrow {
+    display: flex;
 }

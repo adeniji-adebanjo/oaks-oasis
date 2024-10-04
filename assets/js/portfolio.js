@@ -56,8 +56,15 @@ let myname = document.getElementById('myname')
 myname.style.fontSize = '50px';
 myname.style.textAlign = 'center';
 
+function changeName(){
+    myname.innerHTML = 'Oluwafemi'
+    myname.style.backgroundColor = 'red';
+}
+
+setInterval(changeName, 3000);
+
 let lastrow = document.getElementById('lastrow')
-lastrow.style.display = 'flex';
+lastrow.style.display = 'none';
 lastrow.style.justifyContent = 'space-between'
 
 let services = document.getElementById('services')
@@ -144,13 +151,48 @@ let innerDiv = createElement = 'h1'
 innerDiv.innerText= 'Testing 1'
 
 
+let vehicleSelect = document.getElementById('vehicle');
 
 
-const person = { 
-    name: 'femi',
-    age: 2, 
+const showVehicle = () => {
+    vehicleSelect.style.backgroundColor = 'red';
+vehicleSelect.style.display = 'block';
+    return
 }
 
-person.name
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    validateForm();
+});
+
+function myContent() {
+    document.getElementById('lastrow').style.display= 'flex';
+}
 
 
+const validateForm = () => {
+    let name = document.forms['myForm']['fname'].value;
+    let password = document.forms['myForm']['password'].value;
+    let confirmpassword = document.forms['myForm']['confirmpassword'].value;
+
+    if (name === "" || password === "" ) {
+        return alert('Please enter your name or password');
+    } else {
+        if (name.length < 5) {
+            return alert('Name must be at least 5 characters');   
+        }
+        if (password.length < 6) {
+            return alert('Password must be at least 6 characters');
+        }
+        if (!/[123]/.test(password)) {
+            return alert('Password must contain at least one of the numbers 1, 2, or 3');
+        }
+ 
+        if (password !== confirmpassword) {
+            return alert('Password does not match');
+        }
+         alert('Form submitted successfully');
+         return myContent();
+    }
+
+}
